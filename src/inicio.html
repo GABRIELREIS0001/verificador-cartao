@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Verificador de Cartão</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <h1>Verificador de Cartão</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Verifique seu Cartão</h2>
+            <form id="verificador-cartao-form">
+            <label for="numeroCartao">Número do Cartão:</label>
+            <!-- Certifique-se de que o input tem id="numeroCartao" -->
+        <input type="text" id="numeroCartao" placeholder="Digite o número do cartão">
+        <button type="button" onclick="verificarCartao()">Verificar</button>
+        <div id="mensagem"></div>
+            </form>
+        </section>
+        <section>
+            <h2>Como funciona?</h2>
+            <p>Insira o número do seu cartão acima para verificar sua validade. Não armazenamos nenhuma informação inserida.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Verificador de Cartão. Todos os direitos reservados.</p>
+    </footer>
+    <script src="./index.js"></script>
+</body>
+</html>

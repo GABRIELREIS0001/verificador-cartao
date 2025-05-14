@@ -58,3 +58,20 @@ function checarLuhn(numeroCartao) {
 const numeroCartao = "5064817147683436"; // Substitua pelo número do cartão para testar
 const resultado = validarCartaoCredito(numeroCartao);
 console.log(resultado);
+
+window.verificarCartao = function() {
+    const input = document.getElementById('numeroCartao');
+    const mensagemDiv = document.getElementById('mensagem');
+    const numero = input.value.replace(/\D/g, ''); // Corrigido: era input.ariaValueMax, agora input.value
+
+    if (!numero) {
+        mensagemDiv.textContent = "Por favor, digite um número de cartão."; // Corrigido: ortografia
+         mensagemDiv.classList.remove('preenchido');
+        return;
+    }
+
+    const resultado = validarCartaoCredito(numero);
+
+    mensagemDiv.textContent = resultado.mensagem + (resultado.bandeira ? ` Bandeira: ${resultado.bandeira}` : "");
+     mensagemDiv.classList.add('preenchido');
+}
